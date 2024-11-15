@@ -16,14 +16,15 @@ def read_input_file(file_path):
         print("File not found")
         return None
 
-
+# function saving html content to a file
 def save_file(file_path, html_content):
-    with open(file_path, 'w') as file:
+    with open(file_path, 'w', encoding='utf-8') as file:
         file.write(html_content)
 
 
-# function generating AI response based on given promp, and saving it to a .html file
+# function returning AI response based on given prompt
 def generate_AI_response(article_content, max_token, temp):
+
     # creating prompt based on specific requirements
     prompt = """
     Stwórz kod HTML na podstawie poniższego artykułu. Wymagania:
